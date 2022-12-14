@@ -8,11 +8,17 @@ import { HeaderComponent } from './components/header/header.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { CategoriesService } from './services/categories.service';
 import { SkillsPageComponent } from './pages/skills-page/skills-page.component';
+import { TechnosService } from './services/technos.service';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, HomePageComponent, SkillsPageComponent],
+  declarations: [
+    AppComponent,
+    HeaderComponent,
+    HomePageComponent,
+    SkillsPageComponent,
+  ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
-  providers: [CategoriesService],
+  providers: [CategoriesService, TechnosService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

@@ -53,3 +53,15 @@ Nous allons donc éxtraire le logique d'adaptation des données de notre **categ
   - Cette route s'appelle Skills
 - Créer un nouveau component (Qui sera une page entière) dans pages/skils-page
 - Ajouter les router-link dans le **header.component.html** pour gérer la navigation
+
+# Chercher les technos liées à une catégorie quand on clique dessus
+
+- Créer un évenement de click dans **skills-page.component.html**
+  - cet evenement est lié a une methode exposée dans le **skills-page.component.ts**
+- La methode **selectCategory** va faire appel à un service spécifique qui aura en charge de demander les
+  technos au serveur.
+- Créer ce service avec le CLI dans le dossier : services (**TechnosService**)
+  - **Attention!!** Ne pas oublier de rajouter ce service dans les **Providers** de votre Module
+- Dans ce nouveau service écrire une methode qui aura pour objectif de faire un get sur le serveur pour récupérer les technos.
+
+## Exercice 1 : Ecrire l'adapter qui transformera les données du serveur vers des données facilement exploitables par notre application (S'inspirer de ce qui a été fait pour les catégories)
