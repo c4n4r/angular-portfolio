@@ -11,7 +11,8 @@
 
     <div class="cards">
         <div class="card" *ngFor="let category of categories">
-            <div class="card-body">
+            <img src="{{category.image?.thumbnail}}" alt="">
+            <div class="card-body text-center">
                 {{category.name}}
             </div>
         </div>

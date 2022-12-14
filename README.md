@@ -15,3 +15,18 @@ Adapter nos données pour qu'elles soient conformes a ce que l'on veut utiliser 
   afficher
 
 ---
+
+# Ajouter les urls des images à mes categories
+
+## Effectué :
+
+Enrichir notre interface **Category** pour qu'elle implémente les url des images
+
+- Ajouter un champ image à notre interface **Category**
+
+  - Ce champ n'est pas obligatoire (?)
+
+- Modifier notre adapter pour qu'il aille chercher les données de nos images (les urls) et les implémenter dans
+  nos instances de **Category**
+
+- Afficher les images dans le template

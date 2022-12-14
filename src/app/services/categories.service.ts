@@ -20,6 +20,10 @@ export class CategoriesService {
       const category: Category = {
         id: element.id,
         name: element.attributes.name,
+        image: {
+          thumbnail: `http://localhost:1337${element.attributes.image.data.attributes.formats.thumbnail.url}`,
+          medium: `http://localhost:1337${element.attributes.image.data.attributes.formats.medium.url}`,
+        },
       };
       categories.push(category);
     });
