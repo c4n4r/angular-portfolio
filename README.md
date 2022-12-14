@@ -46,3 +46,10 @@ Nous allons donc éxtraire le logique d'adaptation des données de notre **categ
 - Créer un fichier **category.adapter.ts** dans le dossier models
 - Extraire la logique de notre **categories.service** dans ce nouvel adapter
 - Utiliser cet adapter dans norte **categories.service**
+
+# Ajouter une nouvelle page pour afficher notre savoir faire
+
+- Ajouter une route dans **app-routing.module**
+  - Cette route s'appelle Skills
+- Créer un nouveau component (Qui sera une page entière) dans pages/skils-page
+- Ajouter les router-link dans le **header.component.html** pour gérer la navigation
