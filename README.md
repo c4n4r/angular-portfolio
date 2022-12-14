@@ -30,3 +30,19 @@ Enrichir notre interface **Category** pour qu'elle implémente les url des image
   nos instances de **Category**
 
 - Afficher les images dans le template
+
+# Refactorisation de notre service **categories.service**
+
+## Principe :
+
+Mon service est actuellement en charge de faire 2 chose :
+
+- Récupérer les données
+- Adapter les données à notre système
+
+Les bonnes pratiques demandent a ce qu'une classe ou une méthode ne fassent qu'une seule chose.
+Nous allons donc éxtraire le logique d'adaptation des données de notre **categories.service** vers une methode spécifique qui sera UNIQUEMENT en charge de transformer une source de données en un tableaus de **Category**
+
+- Créer un fichier **category.adapter.ts** dans le dossier models
+- Extraire la logique de notre **categories.service** dans ce nouvel adapter
+- Utiliser cet adapter dans norte **categories.service**
