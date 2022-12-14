@@ -11,8 +11,9 @@
   </div>
 
   <div class="technos my-3">
-    <span>Techno liée 1</span>
-    <span>Techno liée 2</span>
+    <span *ngFor="let techno of relatedTechnos">
+      {{ techno.name }}
+    </span>
   </div>
 
   <div class="skills my-3">

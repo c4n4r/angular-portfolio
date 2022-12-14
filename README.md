@@ -65,3 +65,7 @@ Nous allons donc éxtraire le logique d'adaptation des données de notre **categ
 - Dans ce nouveau service écrire une methode qui aura pour objectif de faire un get sur le serveur pour récupérer les technos.
 
 ## Exercice 1 : Ecrire l'adapter qui transformera les données du serveur vers des données facilement exploitables par notre application (S'inspirer de ce qui a été fait pour les catégories)
+
+- Créer un adapter dans le dossier models/adapters qui aura pour nom **techno.adapter.ts**
+- On branche cet adapter a notre **TechnosService** (Voir ce qui a été fait dans le **CategoriesService** si vous voulez voir une application similaire)
+- le component **SkillsPageComponent** récupère les données correctement formatées et peut les afficher dans le templaten (\*ngFor)
