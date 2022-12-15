@@ -11,13 +11,14 @@
   </div>
 
   <div class="technos my-3">
-    <span *ngFor="let techno of relatedTechnos">
+    <span (click)="selectTechno(techno)" *ngFor="let techno of relatedTechnos">
       {{ techno.name }}
     </span>
   </div>
 
   <div class="skills my-3">
-    <span>Skill liée 1</span>
-    <span>Skill liée 2</span>
+    <span *ngFor="let skill of relatedSkills">
+      {{ skill.name }}
+    </span>
   </div>
 </div>

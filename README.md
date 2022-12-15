@@ -74,3 +74,8 @@ Nous allons donc éxtraire le logique d'adaptation des données de notre **categ
 
 - Quand je clique sur une **Techno** sur la page, afficher les **skills** qui sont liées a cette technologie
 - Faites attention : Quand on a une techno de sélectionné, les **skills** liées doivent s'afficher, mais si des **skills** sont affichés, et que vous changez de **techno**... gérer ce cas
+
+## Exercice 3 : Travailler un peu la mise en page de votre **SkillsPageComponent** pour que les données suivantes s'affichent :
+
+- Pour les technos et skills je veux : Le name et le hook
+- pour chaque techno et skill : je peux clicker sur un lien qui me permet de naviger vers une page spécifique à ma techno / skill sélectionné

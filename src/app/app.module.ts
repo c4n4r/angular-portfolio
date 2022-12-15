@@ -9,6 +9,7 @@ import { HomePageComponent } from './pages/home-page/home-page.component';
 import { CategoriesService } from './services/categories.service';
 import { SkillsPageComponent } from './pages/skills-page/skills-page.component';
 import { TechnosService } from './services/technos.service';
+import { SkillsService } from './services/skills.service';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,7 @@ import { TechnosService } from './services/technos.service';
     SkillsPageComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
-  providers: [CategoriesService, TechnosService],
+  providers: [CategoriesService, TechnosService, SkillsService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
