@@ -79,3 +79,20 @@ Nous allons donc éxtraire le logique d'adaptation des données de notre **categ
 
 - Pour les technos et skills je veux : Le name et le hook
 - pour chaque techno et skill : je peux clicker sur un lien qui me permet de naviger vers une page spécifique à ma techno / skill sélectionné
+
+## Créer une nouvelle page pour les skills
+
+Une nouvelle page doit être générée avec le CLI dans le dossier pages
+
+- Ajouter cette nouvelle page au routing
+- La route de cette page est dynamique, l'id de la **Skill** sélectionnée doit être passée en paramètres (skill/:id/show)
+
+Dans le nouveau component :
+
+- Récupérer l'id de ls **Skill** passée en paramètre de l'url dans le constructeur (voir : this.selectedId = route.snapshot.params['id'];)
+
+- Dans el OnInit, je demande a mon **SkillsService** de me retrouver les infos de ma **Skill** en fonction de son id
+- Ajouter une nouvelle methode dans el **SkillsService** pour faire cela.
+- Adapter les données à l'aide du **skills.adapter.ts**
+- Retourner les infos formatées au component.
+- Faire une jolie mise en page
