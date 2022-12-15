@@ -18,3 +18,17 @@ export const adaptApiToSkill = (input: any): Skill[] => {
   });
   return skills;
 };
+
+export const adaptApiToOneSkill = (input: any): Skill => {
+  const skill: Skill = {
+    id: input.data.id,
+    name: input.data.attributes.name,
+    hook: input.data.attributes.hook,
+    content: input.data.attributes.content,
+    image: {
+      thumbnail: `http://localhost:1337${input.data.attributes.image.data.attributes.formats.thumbnail.url}`,
+      medium: `http://localhost:1337${input.data.attributes.image.data.attributes.formats.medium.url}`,
+    },
+  };
+  return skill;
+};

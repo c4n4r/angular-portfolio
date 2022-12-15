@@ -11,14 +11,34 @@
   </div>
 
   <div class="technos my-3">
-    <span (click)="selectTechno(techno)" *ngFor="let techno of relatedTechnos">
-      {{ techno.name }}
-    </span>
+    <div
+      (click)="selectTechno(techno)"
+      class="custom-card"
+      *ngFor="let techno of relatedTechnos"
+    >
+      <div class="left-panel">
+        <img src="{{ techno.image?.thumbnail }}" alt="" />
+      </div>
+      <div class="right-panel">
+        <span class="title">{{ techno.name }}</span>
+        <span class="hook">{{ techno.hook }}</span>
+      </div>
+    </div>
   </div>
 
   <div class="skills my-3">
-    <span *ngFor="let skill of relatedSkills">
-      {{ skill.name }}
-    </span>
+    <div
+      routerLink="/skills/{{ skill.id }}/show"
+      class="custom-card"
+      *ngFor="let skill of relatedSkills"
+    >
+      <div class="left-panel">
+        <img src="{{ skill.image?.thumbnail }}" alt="" />
+      </div>
+      <div class="right-panel">
+        <span class="title">{{ skill.name }}</span>
+        <span class="hook">{{ skill.hook }}</span>
+      </div>
+    </div>
   </div>
 </div>

@@ -10,6 +10,7 @@ import { CategoriesService } from './services/categories.service';
 import { SkillsPageComponent } from './pages/skills-page/skills-page.component';
 import { TechnosService } from './services/technos.service';
 import { SkillsService } from './services/skills.service';
+import { SkillShowPageComponent } from './pages/skill-show-page/skill-show-page.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { SkillsService } from './services/skills.service';
     HeaderComponent,
     HomePageComponent,
     SkillsPageComponent,
+    SkillShowPageComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [CategoriesService, TechnosService, SkillsService],
