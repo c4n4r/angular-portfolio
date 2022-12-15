@@ -69,3 +69,8 @@ Nous allons donc éxtraire le logique d'adaptation des données de notre **categ
 - Créer un adapter dans le dossier models/adapters qui aura pour nom **techno.adapter.ts**
 - On branche cet adapter a notre **TechnosService** (Voir ce qui a été fait dans le **CategoriesService** si vous voulez voir une application similaire)
 - le component **SkillsPageComponent** récupère les données correctement formatées et peut les afficher dans le templaten (\*ngFor)
+
+## Exercice 2 : En s'inspirant de ce qui a été réalisé précédemment, développez la dernière partie de l'application :
+
+- Quand je clique sur une **Techno** sur la page, afficher les **skills** qui sont liées a cette technologie
+- Faites attention : Quand on a une techno de sélectionné, les **skills** liées doivent s'afficher, mais si des **skills** sont affichés, et que vous changez de **techno**... gérer ce cas
