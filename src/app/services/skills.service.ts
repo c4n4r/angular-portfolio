@@ -23,9 +23,9 @@ export class SkillsService {
   }
 
   async findSkillById(id: number): Promise<Skill> {
-    const result = await firstValueFrom(
+    const result: any = await firstValueFrom(
       this.http.get(`http://localhost:1337/api/skills/${id}?populate=image`)
     );
-    return adaptApiToOneSkill(result);
+    return adaptApiToOneSkill(result.data);
   }
 }

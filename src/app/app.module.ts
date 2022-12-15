@@ -11,6 +11,7 @@ import { SkillsPageComponent } from './pages/skills-page/skills-page.component';
 import { TechnosService } from './services/technos.service';
 import { SkillsService } from './services/skills.service';
 import { SkillShowPageComponent } from './pages/skill-show-page/skill-show-page.component';
+import { CustomCardComponent } from './components/cards/custom-card/custom-card.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { SkillShowPageComponent } from './pages/skill-show-page/skill-show-page.
     HomePageComponent,
     SkillsPageComponent,
     SkillShowPageComponent,
+    CustomCardComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [CategoriesService, TechnosService, SkillsService],

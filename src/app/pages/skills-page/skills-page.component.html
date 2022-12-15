@@ -11,34 +11,23 @@
   </div>
 
   <div class="technos my-3">
-    <div
+    <app-custom-card
       (click)="selectTechno(techno)"
-      class="custom-card"
       *ngFor="let techno of relatedTechnos"
+      [title]="techno.name"
+      [content]="techno.hook"
+      [image]="techno.image?.thumbnail"
     >
-      <div class="left-panel">
-        <img src="{{ techno.image?.thumbnail }}" alt="" />
-      </div>
-      <div class="right-panel">
-        <span class="title">{{ techno.name }}</span>
-        <span class="hook">{{ techno.hook }}</span>
-      </div>
-    </div>
+    </app-custom-card>
   </div>
-
   <div class="skills my-3">
-    <div
+    <app-custom-card
       routerLink="/skills/{{ skill.id }}/show"
-      class="custom-card"
       *ngFor="let skill of relatedSkills"
+      [title]="skill.name"
+      [content]="skill.hook"
+      [image]="skill.image?.thumbnail"
     >
-      <div class="left-panel">
-        <img src="{{ skill.image?.thumbnail }}" alt="" />
-      </div>
-      <div class="right-panel">
-        <span class="title">{{ skill.name }}</span>
-        <span class="hook">{{ skill.hook }}</span>
-      </div>
-    </div>
+    </app-custom-card>
   </div>
 </div>

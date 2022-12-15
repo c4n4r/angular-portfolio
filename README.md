@@ -92,7 +92,26 @@ Dans le nouveau component :
 - Récupérer l'id de ls **Skill** passée en paramètre de l'url dans le constructeur (voir : this.selectedId = route.snapshot.params['id'];)
 
 - Dans el OnInit, je demande a mon **SkillsService** de me retrouver les infos de ma **Skill** en fonction de son id
-- Ajouter une nouvelle methode dans el **SkillsService** pour faire cela.
+- Ajouter une nouvelle methode dans le **SkillsService** pour faire cela.
 - Adapter les données à l'aide du **skills.adapter.ts**
 - Retourner les infos formatées au component.
 - Faire une jolie mise en page
+
+## refacto component de cards
+
+Plutot que d'écrire plusieurs fois des div dans ma **skills-page**, je vais créer un component spécifique qui aura pour objectif de d'afficher une card avec des infos génériques passées par le parent
+
+- le décorateur @Input() présent dans le **CustomCardComponent** donne la possibilité au parent de renseigner les données membre de ce component.
+
+- dans mon template de **skills-page** je peux utiliser instancier mon component de la manière suivante
+
+```
+  <app-custom-card
+  routerLink="/skills/{{ skill.id }}/show"
+  \*ngFor="let skill of relatedSkills"
+  [title]="skill.name"
+  [content]="skill.hook"
+  [image]="skill.image?.thumbnail"
+  >
+  </app-custom-card>
+```

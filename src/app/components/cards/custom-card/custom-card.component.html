@@ -1,0 +1,13 @@
+<div class="custom-card">
+  <div class="left-panel">
+    <img src="{{ image }}" alt="" />
+  </div>
+  <div class="right-panel">
+    <span class="title">{{ title }}</span>
+    <span class="hook">{{ content }}</span>
+  </div>
+
+  <button *ngIf="button" class="btn btn-{{ button.color }}">
+    {{ button.label }}
+  </button>
+</div>
