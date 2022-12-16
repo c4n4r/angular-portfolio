@@ -115,3 +115,34 @@ Plutot que d'écrire plusieurs fois des div dans ma **skills-page**, je vais cr�
   >
   </app-custom-card>
 ```
+
+## exemple observables
+
+Les **obsevables** sont des objets similaires aux **Promises**, a ce ci près qu'une **Promise**, une fois résolue se "détruit" toute seule et se libère donc de la RAM. Un **Observable** va quand à lui rester en place et va distribuer l'état de ses données à toutes les entités en "observation" de cet **Observable**
+
+Il y a un exemple très basique d'utilisation des observables dans le dossier **services/observables/count.service.ts**
+
+```
+  private count = new BehaviorSubject<number>(0);
+  private count$: Observable<number> = this.count.asObservable();
+```
+
+Ces deux lignes permettent de définir les données qui seront stockées et la manière tont elles sont exposées.
+
+- **count** s'occupe de stocker les données (ici c'est un simple nombre), il doit OBLIGATOIREMENT être initialisé avec une valeur (0 dans notre cas). Dans le jargon, on appelle cet objet un **Store**
+- **count$** expose le contenu de notre **Store** sous forme d'un **Observable**
+
+Le service expose un getter tout a fait classique et un setter qui permet de définir la nouvelle valeur qui sera contenue dans notre **Store** (par l'intermédiaire de la fonction .next())
+
+Si vous allez voir dans le dossier **components/count/count.component.ts** vous trouverez une application simple de souscription aux observables
+
+```
+  ngOnInit(): void {
+    this.countService.getCount().subscribe((countValue: number) => {
+      this.count = countValue;
+    });
+  }
+```
+
+Dans le OnInit de notre component, on voit que l'on fait un **subscribe** sur notre obsevable **count**. A partir de ce moment, tout nouvel état de notre compteur sera remonté à ce component (et a tous ceux qui souscrivent à l'observable) qui pourra faire ce qu'il veut de cette donnée.
+Dans notre cas, on utilisera simplement cette donnée (countValue) pour renseigner le compteur qui sera affiché dans le template de notre component.

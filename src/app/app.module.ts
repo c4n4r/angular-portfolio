@@ -12,6 +12,8 @@ import { TechnosService } from './services/technos.service';
 import { SkillsService } from './services/skills.service';
 import { SkillShowPageComponent } from './pages/skill-show-page/skill-show-page.component';
 import { CustomCardComponent } from './components/cards/custom-card/custom-card.component';
+import { CountComponent } from './components/count/count.component';
+import { CountService } from './services/observables/count.service';
 
 @NgModule({
   declarations: [
@@ -21,9 +23,10 @@ import { CustomCardComponent } from './components/cards/custom-card/custom-card.
     SkillsPageComponent,
     SkillShowPageComponent,
     CustomCardComponent,
+    CountComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
-  providers: [CategoriesService, TechnosService, SkillsService],
+  providers: [CategoriesService, TechnosService, SkillsService, CountService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
